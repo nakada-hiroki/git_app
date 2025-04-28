@@ -1,12 +1,17 @@
 import time
 
-start_time = time.perf_counter()
+class Timer:
+    def __init__(self):
+        self.start = time.perf_counter()
+
+    def restart(self):
+        self.start = time.perf_counter()
+
+    def get_time(self):
+        return time.perf_counter() - self.start
+
+timer = Timer()
 
 print('hellow world')
 
-end_time  = time.perf_counter()
-execution_time = end_time - start_time
-
-print(f"Program executed in: {execution_time: .5f} seconds")
-print(start_time)
-print(end_time)
+print(f"Program executed in: {timer.get_time(): .5f} seconds")
