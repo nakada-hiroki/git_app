@@ -14,4 +14,6 @@ timer = Timer()
 
 print('hellow world')
 
+# timer.restart()
+
 print(f"Program executed in: {timer.get_time(): .5f} seconds")
