@@ -4,4 +4,7 @@ class Stopwatch:
     self.time_start = 0
     self.time_elapsed = 0
 
-  def 
+  def start(self):
+    if not self.running:
+      self.running = True
+      self.time_start = time.perf_counter() 
